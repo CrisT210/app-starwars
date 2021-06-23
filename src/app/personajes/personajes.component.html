@@ -1,0 +1,30 @@
+<h1 class="display-4 my-5">StarWars - Personajes</h1>            
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Personajes</th>
+            <th>Detalles</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of people">
+            <td>{{p.name}}</td>
+            <td>
+                <a (click)="guardarUrl(p.url, p.homeworld, p.films)" class="btn btn-info" role="button" routerLink="/personajes/detalle">Detalles</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<ul class="pagination">
+    <li class="page-item"><button (click)="paginador(0)" class="page-link">Previous</button></li>
+    <li class="page-item"><button (click)="paginador(1)" class="page-link">1</button></li>
+    <li class="page-item"><button (click)="paginador(2)" class="page-link">2</button></li>
+    <li class="page-item"><button (click)="paginador(3)" class="page-link">3</button></li>
+    <li class="page-item"><button (click)="paginador(4)" class="page-link">4</button></li>
+    <li class="page-item"><button (click)="paginador(5)" class="page-link">5</button></li>
+    <li class="page-item"><button (click)="paginador(6)" class="page-link">6</button></li>
+    <li class="page-item"><button (click)="paginador(7)" class="page-link">7</button></li>
+    <li class="page-item"><button (click)="paginador(8)" class="page-link">8</button></li>
+    <li class="page-item"><button (click)="paginador(9)" class="page-link">9</button></li>
+    <li class="page-item"><button (click)="paginador(10)" class="page-link">Next</button></li>
+</ul>

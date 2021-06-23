@@ -1,0 +1,13 @@
+<h1 class="display-4 my-5">{{persona.name}} - Detalles</h1>
+<p class="font-weight-bolder">Nombre: <span>{{persona.name}}</span></p>
+<p class="font-weight-bolder">Año nacimiento: <span>{{persona.birth_year}}</span></p>
+<p class="font-weight-bolder">Genero: <span>{{persona.gender}}</span></p>
+<p class="font-weight-bolder">Planeta Origen: <span>{{planet.name}}</span></p>
+<div class="row">
+    <div class="col m-3 border">
+        <h2 class="my-3">Peliculas</h2>
+        <ul class="list-group list-group-flush" *ngFor="let f of film">
+            <li class="list-group-item">{{f}}</li>
+        </ul>
+    </div>
+</div>
